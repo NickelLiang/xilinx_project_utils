@@ -47,3 +47,4 @@
 # Helpers
 !*.bat
 !*.sh
+!*.md

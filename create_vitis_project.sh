@@ -161,6 +161,4 @@ echo -e "Vitis project creation complete.\n"
 
 if ask "Do you want to open Vitis IDE?" N; then
     vitis -workspace ./${PRJ_NAME} &
-else
-    exit
 fi
