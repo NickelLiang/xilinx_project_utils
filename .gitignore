@@ -1,0 +1,49 @@
+##	This is an example .gitignore file for Vivado, please treat it as an example as
+##	it might not be complete. In addition, XAPP 1165 should be followed.
+
+# Exclude all
+*
+
+# Keep root folder files
+!*/
+!.gitignore
+!*.md
+
+# HDL / HVL / XDC / TCL
+!*.v
+!*.sv
+!*.xdc
+!*.tcl
+!*.wcfg
+
+# Block Designs
+**/block_designs/*/*
+!**/block_designs/*/hdl
+!*.bd
+
+# Vivado Project
+**/vivado/*
+!*.tcl
+!*.mmi
+!*.xsa
+!*.bit
+
+# IPs
+**/xilinx_ips/*/*
+!*.xci
+!*.xcix
+
+# Vitis Project
+**/vitis/*
+!*.tcl
+
+# Firmware and Software
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.py
+
+# Helpers
+!*.bat
+!*.sh
