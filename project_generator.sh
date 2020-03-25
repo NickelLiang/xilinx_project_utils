@@ -348,15 +348,15 @@ fi
 ## End of Argument Parser ##
 
 ## DEBUG ##
-echo "VIVADO:   $VIVADO"
-echo "VITIS:    $VITIS"
-echo "SW:       $SOFTWARE"
-echo "GIT:      $GIT"
-echo "PATH:     $PRJ_PATH"
-echo "NAME:     $PRJ_NAME"
-echo "NOREADME: $NO_README"
-echo "FPGA_PART:$FPGA_PART"
-echo ""
+# echo "VIVADO:   $VIVADO"
+# echo "VITIS:    $VITIS"
+# echo "SW:       $SOFTWARE"
+# echo "GIT:      $GIT"
+# echo "PATH:     $PRJ_PATH"
+# echo "NAME:     $PRJ_NAME"
+# echo "NOREADME: $NO_README"
+# echo "FPGA_PART:$FPGA_PART"
+# echo ""
 ## DEBUG ##
 
 # This function can take no parameter to check if the file/directory exist and
