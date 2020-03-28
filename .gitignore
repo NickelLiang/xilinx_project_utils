@@ -16,11 +16,6 @@
 !*.tcl
 !*.wcfg
 
-# Block Designs
-**/block_designs/*/*
-!**/block_designs/*/hdl
-!*.bd
-
 # Vivado Project
 **/vivado/*
 !*.tcl
@@ -47,4 +42,13 @@
 # Helpers
 !*.bat
 !*.sh
-!*.md
+
+# Block Designs
+**/block_designs/*/*
+!**/block_designs/*/hdl
+!**/block_designs/*/*.bd
+# We want MIG project file
+# I know this is ugly, but couldn't come up with better one
+!**/block_designs/*/ip
+**/block_designs/*/ip/**/*.*
+!**/block_designs/*/ip/**/mig*.prj
