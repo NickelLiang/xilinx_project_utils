@@ -33,12 +33,12 @@ The following command will create a project with predefined `.gitignore` file
 and create Vitis and Vivado project structure with project name `lab01` for 
 `xc7a75tfgg484-1` FPGA in `../lab01_folder`.
 
-`$ sh project_generator.sh -gtv -n lab01 -p ../lab01_folder --part xc7a75tfgg484-1`
+`$ bash project_generator.sh -gtv -n lab01 -p ../lab01_folder --part xc7a75tfgg484-1`
 
 You can also use interactive mode by running the following command and follow
 the instruction.
 
-`$ sh project_generator.sh`
+`$ bash project_generator.sh`
 
 ### Dependencies
 Currently this script is only verified on Ubuntu 18.04 and note yet tested with
