@@ -47,8 +47,12 @@
 **/block_designs/*/*
 !**/block_designs/*/hdl
 !**/block_designs/*/*.bd
+!**/block_designs/*/*.bxml
 # We want MIG project file
 # I know this is ugly, but couldn't come up with better one
 !**/block_designs/*/ip
 **/block_designs/*/ip/**/*.*
-!**/block_designs/*/ip/**/mig*.prj
+!**/block_designs/*/ip/**/mig_*.prj
+!**/block_designs/*/ip/*mig*/*.xci
+!**/block_designs/*/ip/*mig*/*.xml
+**/block_designs/*/ip/*rst*/
