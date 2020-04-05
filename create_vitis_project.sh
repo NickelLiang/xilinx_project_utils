@@ -32,7 +32,7 @@ process_dir() {
 
     # Scan the directory, processing files and collecting subdirs
     for file in "$1"/*; do
-        if [[ -f "$file" ]]; then
+        if [[ -f "$file" && ${file: -3} != ".ld" ]]; then
             echo "Process and Append File: ${file}"
             echo_file "${file#"$SRC_PATH"}"
         elif [[ -d "$file" ]]; then
@@ -156,6 +156,21 @@ mv ./${PRJ_NAME}/${PRJ_NAME}/src/*.ld .
 rm -rf ./${PRJ_NAME}/${PRJ_NAME}/src
 mkdir ./${PRJ_NAME}/${PRJ_NAME}/src
 mv ./*.ld ./${PRJ_NAME}/${PRJ_NAME}/src
+
+# Add symlink to linker script(s) if present
+shopt -s globstar nullglob
+ldscripts=(${SRC_PATH}/**/*.ld)
+if [[ ! -z ${ldscripts} ]]; then
+    echo "Adding user-provided linker script(s)."
+
+    # Delete existing project linker scripts
+    rm -f ./${PRJ_NAME}/${PRJ_NAME}/src/*.ld
+
+    for f in ${ldscripts[@]}; do
+        # Create symlink
+        ln -s ../../../"${f}" ./${PRJ_NAME}/${PRJ_NAME}/src/
+    done
+fi
 
 echo -e "Vitis project creation complete.\n"
 
