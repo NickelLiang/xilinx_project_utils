@@ -15,6 +15,7 @@
 !*.xdc
 !*.tcl
 !*.wcfg
+!*.ld
 
 # Vivado Project
 **/vivado/*
