@@ -16,6 +16,7 @@
 !*.tcl
 !*.wcfg
 !*.ld
+!*.xml
 
 # Vivado Project
 **/vivado/*
