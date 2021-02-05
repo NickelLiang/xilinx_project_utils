@@ -130,7 +130,7 @@ echo ""
 
 ## GENERATE VITIS PROJECT ##
 echo "Generate Vitis project in: ./${PRJ_NAME}"
-xsct create_vitis_project.tcl --project_name ${PRJ_NAME} --vivado_dir ${VIVADO_PATH} --source_dir ${SRC_PATH}
+xsct create_vitis_project.tcl --project_name ${PRJ_NAME} --vivado_dir ${XSA_PATH%/*} --source_dir ${SRC_PATH}
 echo -e "\nFinish generating Vitis project.\n"
 
 ## CREATE SOURCE LINK ##
